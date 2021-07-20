@@ -48,8 +48,49 @@ body {
 .upper-line .link:hover {
   color: var(--accent);
 }
+.container {
+  width: 1200px;
+}
+/*Обнулення базових стилів*/
+h1,h2,h3,h4,h5,h6,a,p,li,ul,img {
+  margin: 0px, 0px, 0px, 0px;
+  padding: 0px, 0px, 0px, 0px;
+  border: none;
+ 
+}
+
 
 /*header*/
+.nav-links, .contacts {
+  height: 16px;
+  flex-wrap:nowrap;
+
+}
+.upper-line {
+  height: 80px;
+  display: flex;
+  align-items:center;
+
+}
+
+.list-box {
+   white-space:nowrap;
+}
+/*Видалити*/
+
+.nav-links {
+  background-color: tomato;
+  width: 294px;
+}
+
+.brand {
+  background-color: yellow;
+}
+.contacts {
+  background-color: yellowgreen;
+}
+
+
 .upper-line .list {
   font-weight: 500;
 }
