@@ -49,33 +49,78 @@ body {
   color: var(--accent);
 }
 .container {
-  width: 1200px;
+  display: flex;
+  align-items:center;
+  width: 1200px; 
+  background-color: aqua;
 }
+
+.cap.container {
+  background-color: darkkhaki;
+  /* display: flex;
+  width: 1200px; */
+  flex-direction: column;
+  /* align-items:center; */
+}
+
+  .upl-container {
+  display: flex;
+  align-items:center;
+  width: 1200px; 
+  background-color: darkblue;
+}
+
+.list-box {
+  background-color: darkgreen;
+}
+.ft-container {
+  background-color: blueviolet;
+  width: 231px;
+}
+
 /*Обнулення базових стилів*/
-h1,h2,h3,h4,h5,h6,a,p,li,ul,img {
+/* h1,h2,h3,h4,h5,h6,a,p,li,ul,img {
   margin: 0px, 0px, 0px, 0px;
   padding: 0px, 0px, 0px, 0px;
   border: none;
- 
+ } */
+ul {
+  /* display: inline-flex; */
+  
 }
-
 
 /*header*/
-.nav-links, .contacts {
-  height: 16px;
-  flex-wrap:nowrap;
-
-}
-.upper-line {
-  height: 80px;
+/* .nav-links .list-box, .contacts .list-box  */
+.list-box
+{
   display: flex;
   align-items:center;
 
 }
-
-.list-box {
-   white-space:nowrap;
+.nav-links, .contacts{
+height: 16px; 
 }
+
+.upper-line {
+  height: 80px;
+}
+
+.features .text {
+  width: 270px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.upper-line, .section, .footer {
+  padding-left: 215px;
+  padding-right: 215px;
+}
+
+.upper-line .container {
+  justify-content:space-between;
+}
+
 /*Видалити*/
 
 .nav-links {
@@ -124,7 +169,9 @@ h1,h2,h3,h4,h5,h6,a,p,li,ul,img {
 .nav-links,
 .main-content .list,
 .upper-line .list {
-  display: inline-block;
+  /* display: inline-block; */
+/* display: flex; */
+
 }
 
 /*Main*/
@@ -139,9 +186,9 @@ h1,h2,h3,h4,h5,h6,a,p,li,ul,img {
   border-style: none;
   border-radius: 4px;
 }
-.hero-title {
+/* .hero-title {
   margin-top: 0px;
-}
+} */
 
 /*footer*/
 .footer .brand-color-two {
@@ -161,6 +208,13 @@ footer {
 }
 
 /*Стилі файлу index */
+.cap {
+  height: 600px;
+    /* display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column; */
+}
 .cap .hero-title {
   width: 696px;
   height: 120px;
@@ -170,6 +224,8 @@ footer {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--hero-text);
+
+  text-align: center;
 }
 .cap .btn {
   width: 200px;
@@ -179,6 +235,10 @@ footer {
   line-height: 1.875;
   letter-spacing: 0.06em;
   color: var(--hero-text);
+}
+
+.our-works .container {
+  
 }
 
 .our-works .title,
