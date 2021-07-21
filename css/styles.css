@@ -1,3 +1,4 @@
+
 :root {
   --body-bgc: #e5e5e5; /* Колір фону тіла сайту*/
   --pri-text: #757575; /* Основний колір тексту */
@@ -26,10 +27,10 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.714; /*24px*/
-  font-style: normal;
 }
-.list-box {
-  margin-bottom: 0px;
+ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .link {
@@ -49,25 +50,18 @@ body {
   color: var(--accent);
 }
 .container {
-  display: flex;
-  align-items:center;
   width: 1200px; 
+  padding: 0px, 15px, 0px, 15px;
+  margin: 0, auto;
   background-color: aqua;
-}
-
-.cap.container {
-  background-color: darkkhaki;
-  /* display: flex;
-  width: 1200px; */
-  flex-direction: column;
-  /* align-items:center; */
+  
 }
 
   .upl-container {
-  display: flex;
+  /* display: flex;
   align-items:center;
   width: 1200px; 
-  background-color: darkblue;
+  background-color: darkblue; */
 }
 
 .list-box {
@@ -78,19 +72,13 @@ body {
   width: 231px;
 }
 
-/*Обнулення базових стилів*/
-/* h1,h2,h3,h4,h5,h6,a,p,li,ul,img {
-  margin: 0px, 0px, 0px, 0px;
-  padding: 0px, 0px, 0px, 0px;
-  border: none;
- } */
-ul {
-  /* display: inline-flex; */
-  
-}
 
 /*header*/
-/* .nav-links .list-box, .contacts .list-box  */
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+
 .list-box
 {
   display: flex;
@@ -98,10 +86,11 @@ ul {
 
 }
 .nav-links, .contacts{
-height: 16px; 
+/* height: 16px;  */
 }
 
 .upper-line {
+  display: flex;
   height: 80px;
 }
 
@@ -113,23 +102,20 @@ height: 16px;
   padding-bottom: 94px;
 }
 .upper-line, .section, .footer {
-  padding-left: 215px;
-  padding-right: 215px;
-}
-
-.upper-line .container {
-  justify-content:space-between;
+  /* padding-left: 215px;
+  padding-right: 215px; */
 }
 
 /*Видалити*/
 
 .nav-links {
   background-color: tomato;
-  width: 294px;
+  /* width: 294px; */
 }
 
 .brand {
   background-color: yellow;
+  margin-right: 93px;
 }
 .contacts {
   background-color: yellowgreen;
@@ -235,10 +221,6 @@ footer {
   line-height: 1.875;
   letter-spacing: 0.06em;
   color: var(--hero-text);
-}
-
-.our-works .container {
-  
 }
 
 .our-works .title,
