@@ -27,7 +27,9 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.714; /*24px*/
-}
+  width: 1600px;
+  }
+
 ul {
   margin: 0;
   padding: 0;
@@ -53,30 +55,31 @@ ul {
   width: 1200px; 
   padding: 0px, 15px, 0px, 15px;
   margin: 0, auto;
-  background-color: aqua;
+  outline: 2px solid aqua;
   
-}
-
-  .upl-container {
-  /* display: flex;
-  align-items:center;
-  width: 1200px; 
-  background-color: darkblue; */
 }
 
 .list-box {
   background-color: darkgreen;
 }
 .ft-container {
-  background-color: blueviolet;
+  outline: 2px solid blueviolet;
   width: 231px;
 }
 
 
 /*header*/
-.header-flex {
+.flex {
   display: flex;
   align-items: center;
+  justify-content:center;
+}
+.upper-line .flex {
+  justify-content:space-between;
+}
+
+.upper-line .link:not(:first-child) {
+  padding-left: 50px;
 }
 
 .list-box
@@ -84,9 +87,6 @@ ul {
   display: flex;
   align-items:center;
 
-}
-.nav-links, .contacts{
-/* height: 16px;  */
 }
 
 .upper-line {
@@ -101,26 +101,12 @@ ul {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.upper-line, .section, .footer {
-  /* padding-left: 215px;
-  padding-right: 215px; */
-}
-
 /*Видалити*/
 
-.nav-links {
-  background-color: tomato;
-  /* width: 294px; */
-}
-
 .brand {
-  background-color: yellow;
+  outline: 2px solid yellow;
   margin-right: 93px;
 }
-.contacts {
-  background-color: yellowgreen;
-}
-
 
 .upper-line .list {
   font-weight: 500;
@@ -149,15 +135,6 @@ ul {
 }
 .contacts .list {
   color: var(--pri-text);
-}
-.brand,
-.contacts,
-.nav-links,
-.main-content .list,
-.upper-line .list {
-  /* display: inline-block; */
-/* display: flex; */
-
 }
 
 /*Main*/
@@ -266,4 +243,9 @@ footer {
 .portfolio .type {
   font-size: 16px;
   line-height: 1.875;
+}
+
+.filters .btn {
+  padding: 6px, 22px, 6px, 22px;
+  /* background-color: orange; */
 }
