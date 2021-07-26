@@ -8,6 +8,7 @@
   --btn-bgc: #f5f4fa; /* Основний колір фону кнопок */
   --pri-brand: #2196f3; /* Основний колір бренду (лого) */
   --accent: #2196f3; /* колір акценту (виділення посилань і кнопок)*/
+  --btn-hover: #188ce8; /* Колір ховера для кнопки героя*/
   --sec-brand: #000000; /* вторинний колір бренду (лого шапка) */
   --ter-brand: #ffffff; /* Третинний колір бренду (лого футер) */
   --pri-section-bgc: #ffffff; /* Основний колір фону секцій*/
@@ -32,9 +33,7 @@ h1,
 h2,
 h3,
 ul,
-li,
-p,
-a {
+p {
   margin: 0;
   padding: 0;
 }
@@ -59,7 +58,6 @@ img {
   list-style: none;
 
   display: flex;
-  background-color: darkgreen;
 }
 
 .link {
@@ -76,7 +74,6 @@ img {
   width: 1200px;
   padding: 0px 15px;
   margin: 0 auto;
-  outline: 2px solid aqua;
 }
 .hidden {
   position: absolute;
@@ -85,8 +82,6 @@ img {
   height: 1px;
   margin: -1px;
 }
-
-/*header*/
 .flex {
   display: flex;
   align-items: center;
@@ -95,11 +90,19 @@ img {
 .col {
   flex-direction: column;
 }
+
+/*header*/
+
+.upper-line {
+  border-bottom: 1px solid #ececec;
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
+
+  display: flex;
+  height: 80px;
+}
 .upper-line .container {
   justify-content: start;
-}
-.upper-line .list-box {
-  letter-spacing: 0.02em;
 }
 
 .upper-line .list:not(:first-child) {
@@ -112,16 +115,10 @@ img {
 .nav-links .list:last-child {
   margin-right: 331px;
 }
-.upper-line {
-  display: flex;
-  height: 80px;
-}
-
-.features .text {
-  width: 270px;
-}
 
 .upper-line .list {
+  letter-spacing: 0.02em;
+  line-height: 1.172;
   font-weight: 500;
 }
 .link.active {
@@ -132,8 +129,6 @@ img {
   font-weight: bold;
   font-size: 26px;
   line-height: 1.192;
-
-  outline: 2px solid yellow;
 }
 .brand-color-one {
   color: var(--pri-brand);
@@ -151,7 +146,9 @@ img {
 .contacts .list {
   color: var(--pri-text);
 }
+
 /*footer*/
+
 .footer .brand-color-two {
   color: var(--ter-brand);
 }
@@ -202,13 +199,13 @@ footer {
   color: var(--hero-text);
 
   padding: 10px 32px;
-  border: 0;
-  border-radius: 4px; 
+  border: 0px;
+  border-radius: 4px;
 }
 .cap-btn:hover,
 .cap-btn:focus {
-  border: 2px;
- }
+  background: var(--btn-hover);
+}
 .our-works.section {
   padding-top: 0px;
 }
@@ -223,7 +220,9 @@ footer {
 }
 .our-team .list {
   background-color: var(--pri-section-bgc);
+  border-radius: 0px 0px 4px 4px;
 }
+
 .features .list:not(:first-child),
 .our-works .list:not(:first-child),
 .our-team .list:not(:first-child) {
@@ -244,11 +243,13 @@ footer {
 
 .main-content .title {
   color: var(--pri-title);
-  /* margin: 0; */
 }
+
 .features .list {
+  /* flex-basis: calc (100% / 4 - 30px); */
   width: 270px;
 }
+
 .features .title {
   text-transform: uppercase;
   line-height: 1.143;
@@ -264,6 +265,7 @@ footer {
   line-height: 1.167;
   margin-bottom: 50px;
 }
+
 /*Стилы файлу portfolio*/
 
 .portfolio .title {
@@ -277,7 +279,7 @@ footer {
 
 .filters .btn {
   padding: 6px 22px;
- }
+}
 .btn {
   font-family: inherit;
   cursor: pointer;
@@ -303,7 +305,21 @@ footer {
   margin-bottom: 50px;
 }
 .card {
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
   border-top: none;
 }
-/* .list:not(:first-child) */
+.cards .list:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.cards {
+  flex-wrap: wrap;
+}
+.card .title {
+  margin-bottom: 4px;
+}
+.card {
+  padding: 20px 24px;
+}
+.cards .list:nth-child(-n + 6) {
+  margin-bottom: 30px;
+}
